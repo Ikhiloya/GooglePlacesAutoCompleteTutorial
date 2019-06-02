@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GooglePlacesTutorial</string>
+    <string name="api_key">changeme</string>
+    <string name="menu_search">search</string>
+</resources>
