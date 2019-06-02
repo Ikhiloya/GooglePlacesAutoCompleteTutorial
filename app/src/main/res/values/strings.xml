@@ -2,4 +2,8 @@
     <string name="app_name">GooglePlacesTutorial</string>
     <string name="api_key">changeme</string>
     <string name="menu_search">search</string>
+    <string name="next">Next</string>
+    <string name="autocompletefromfragment">Autocomplete From Fragment</string>
+    <string name="autocompletefromintent">Autocomplete From Intent</string>
+    <string name="placepredictionprogrammatically">Place prediction Programmatically</string>
 </resources>

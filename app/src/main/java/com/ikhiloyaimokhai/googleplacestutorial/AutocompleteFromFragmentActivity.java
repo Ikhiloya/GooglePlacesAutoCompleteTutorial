@@ -1,8 +1,11 @@
 package com.ikhiloyaimokhai.googleplacestutorial;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.common.api.Status;
 import com.google.android.libraries.places.api.Places;
@@ -12,13 +15,15 @@ import com.google.android.libraries.places.widget.listener.PlaceSelectionListene
 
 import java.util.Arrays;
 
-public class AutocompleteFrromFragmentActivity extends AppCompatActivity {
+public class AutocompleteFromFragmentActivity extends AppCompatActivity {
 
-     private static String TAG = AutocompleteFrromFragmentActivity.class.getSimpleName();
+    private static String TAG = AutocompleteFromFragmentActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_autocomplete_from_fragment);
+        Button nextButton = findViewById(R.id.nextButton);
         String apiKey = getString(R.string.api_key);
 
         /**
@@ -29,7 +34,7 @@ public class AutocompleteFrromFragmentActivity extends AppCompatActivity {
             Places.initialize(getApplicationContext(), apiKey);
         }
 
-       // Initialize the AutocompleteSupportFragment.
+        // Initialize the AutocompleteSupportFragment.
         AutocompleteSupportFragment autocompleteFragment = (AutocompleteSupportFragment)
                 getSupportFragmentManager().findFragmentById(R.id.autocomplete_fragment);
 
@@ -48,5 +53,7 @@ public class AutocompleteFrromFragmentActivity extends AppCompatActivity {
                 Log.i(TAG, "An error occurred: " + status);
             }
         });
+
+        nextButton.setOnClickListener(v -> startActivity(new Intent(AutocompleteFromFragmentActivity.this, AutocompleteFromIntentActivity.class)));
     }
 }

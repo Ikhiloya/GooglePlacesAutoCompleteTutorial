@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".AutocompleteFromIntentActivity">
 
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="11dp"
+        android:text="@string/next" />
+
 </android.support.constraint.ConstraintLayout>

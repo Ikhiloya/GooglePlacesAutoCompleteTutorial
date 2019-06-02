@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.Status;
@@ -28,10 +29,15 @@ public class AutocompleteFromIntentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_autocomplete_from_intent);
+        Button nextButton = findViewById(R.id.nextButton);
+
         String apiKey = getString(R.string.api_key);
         if (!Places.isInitialized()) {
             Places.initialize(getApplicationContext(), apiKey);
         }
+
+        nextButton.setOnClickListener(v -> startActivity(new Intent(AutocompleteFromIntentActivity.this, PlacePredictionProgrammatically.class)));
+
     }
 
 

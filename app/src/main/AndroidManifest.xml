@@ -9,15 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AutocompleteFrromFragmentActivity"></activity>
-        <activity android:name=".AutocompleteFromIntentActivity">
-        </activity>
-        <activity android:name=".PlacePredictionProgrammatically">
+        <activity android:name=".AutocompleteFromFragmentActivity"
+            android:label="@string/autocompletefromfragment">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".AutocompleteFromIntentActivity"
+            android:label="@string/autocompletefromintent">
+        </activity>
+        <activity android:name=".PlacePredictionProgrammatically"
+            android:label="@string/placepredictionprogrammatically">
         </activity>
     </application>
 
